@@ -1,0 +1,14 @@
+
+
+
+img {
+    border-radius: 100%;
+    
+}
+
+body {
+    /* background-image: url("https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg"); */
+    background-image: linear-gradient(to bottom right,green, rgb(0, 195, 255), white);
+    background-color: #cccccc;
+ 
+}
