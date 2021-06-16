@@ -1,0 +1,11 @@
+/* LANDING PAGE STYLING */
+.container {
+    display: flexbox;
+    flex-direction: column;
+}
+
+#main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
