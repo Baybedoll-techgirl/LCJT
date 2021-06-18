@@ -1,0 +1,40 @@
+/* LANDING PAGE STYLING */
+body {
+    font-size: 1.3rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100vw; /* takes up the entire view width */
+    height: 100vh; /* takes up the entire view height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto; /* keeping things centered with different viewport sizes */
+}
+
+.container > * {
+    width: 100%;
+    /* any child of .container takes up 100% */
+}
+
+#home {
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: gray;
+}
+
+.btn {
+    margin-bottom: 1rem;
+}
