@@ -7,13 +7,18 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzub3k1TORxv8uEicmoSKg&difficulty=Easy&category=code", requestOptions)
+fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzub3k1TORxv8uEicmoSKg&multiple_correct_answers=false&difficulty=easy&category=Code", requestOptions)
   .then(response => response.json())
   .then(result => {
-    console.log(result)
-    document.getElementById('questions').innerText=result[0].question;
+   document.getElementById('question').innerText=result[0].question;
+   document.getElementsByClassName('form-check').innerText=result.answers;
    
   })
   .catch(error => console.log('error', error));
-document.getElementById('questions').innerText='Somestring'
+  // let theQuestions = 
+// document.getElementById('question').innerText='Somestring'
+//var to keep score
+   //var to hold responses
+
+
 
