@@ -2,7 +2,7 @@
 body {
     font-size: 1.3rem;
 }
-
+ 
 .flex-column {
     display: flex;
     flex-direction: column;
