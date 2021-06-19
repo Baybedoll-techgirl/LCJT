@@ -17,7 +17,7 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
     if (value != null) {
       let answerContainer = document.getElementById('answers');
       let choiceLine = document.createElement("li");
-      choiceLine.textContent = value;
+      choiceLine.textContent = " " + value;
       choiceLine.setAttribute("for", key);
       const radioBtn = document.createElement('input');
       radioBtn.setAttribute("type", "radio");
