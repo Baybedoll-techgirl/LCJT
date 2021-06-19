@@ -16,9 +16,15 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
    for (const [key, value] of Object.entries(result[0].answers)) {
     if (value != null) {
       let answerContainer = document.getElementById('answers');
-      let choiceLabel = document.createElement("li");
-      choiceLabel.textContent = value;
-      answerContainer.append(choiceLabel);
+      let choiceLine = document.createElement("li");
+      choiceLine.textContent = value;
+      choiceLine.setAttribute("for", key);
+      const radioBtn = document.createElement('input');
+      radioBtn.setAttribute("type", "radio");
+      radioBtn.setAttribute("name", "Answer-choices");
+      radioBtn.id = key;
+      choiceLine.prepend(radioBtn);
+      answerContainer.append(choiceLine);
 
     }
    }
