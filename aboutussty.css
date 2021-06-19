@@ -1,14 +1,103 @@
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 
 
+
+
+/* body {
+    background-color: skyblue;
+} */
 
 img {
-    border-radius: 100%;
+    position:relative;
+    border-radius: 50%;
+    transform: translate(-0%, -0%,);
+    margin-right: 50%;
+    padding-left: 33.33%;
+    padding-right: 33.33%;
     
 }
 
-body {
-    /* background-image: url("https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg"); */
-    background-image: linear-gradient(to bottom right,green, rgb(0, 195, 255), white);
-    background-color: #cccccc;
+
+p {
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+h1 {
+    color:white;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    
+}
+
+.title {
+    position: fixed;
+    font-size: 80px;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    padding-left: 40%;
+    margin-top: 0%;
+    color:rgb(0, 183, 255);
+
+
+}
+
+.CJ {
+    /* display: flex; */
+    position:fixed;
+    /* margin-left: 70%; */
+    /* flex-direction: column; */
+    right: 0;
+    height: 100%;
+    width: 33.33%;
+    margin-top: 10%;
+    background-color: red;
+   
+}
+
+
+.tj {
+    /* display: flex; */
+    position:fixed;
+    /* flex-direction: column; */
+    /* margin-left: 0%; */
+    height: 100%;
+    left: 0;
+    width: 33.33%;
+    margin-top: 10%;
+    background-color: pink;
+    
  
 }
+
+
+
+.Laura {
+    /* display: flex; */
+    position:fixed;
+    /* flex-direction: column; */
+   /* margin-left: auto;
+   margin-right: auto; */
+   right:33.33%;
+   margin-top: 10%;
+   height: 100%;
+    width: 33.33%;
+    background-color: purple;
+ 
+}
+
+
+
