@@ -37,20 +37,19 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
    }
    const radios = document.getElementsByName('Answer-choices');
 
+   incrementScore = num => {
+    score += num;
+    scoreText.textContent = score;
+  }
+
   for(radio in radios) {
     radios[radio].onclick = function() {
       if (this.id === result[0].correct_answer) {
        incrementScore(CORRECT_BONUS);
       } 
-      
-      incrementScore = num => {
-        score += num;
-        scoreText.innerText = score;
-      }
+      localStorage.setItem('mostRecentScore', score);
     };
   };
 
   })
   .catch(error => console.log('error', error));
-
- 
