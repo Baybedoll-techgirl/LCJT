@@ -5,17 +5,25 @@
     <meta http-equiv=“X-UA-Compatible” content="IE=edge">
     <meta name="viewport” content=“width=device-width, initial-scale=1.0">
     <title>Test Your Knowledge</title>
-    <link rel=“stylesheet” href=“style.css”>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel=“stylesheet” href=“style.css”>
     </head>
 <body>
     <div class="container">
         <div id="quiz" class="flex-column flex-center">
-            <h2 id="question">Load Questions here.</h2>
+            <div id="hud">
+                <p class="hud-prefix">Question</p>
+                <h1 class="hud-main-text" id="questionCounter">1/10</h1>
+            </div>
+            <div id="hud">
+                <p class="hud-prefix">Score</p>
+                <h1 class="hud-main-text" id="score">0</h1>
+            </div>
+            <h1 id="question">Load Questions here.</h1>
             <ul id="answers" style="list-style-type: none;">
               
             </ul>
-              <a class="btn btn-primary" href="#" role="button">Next</a>
+              <a class="btn btn-primary" href="/end.html" role="button">Next</a>
                            
                    
         </div>

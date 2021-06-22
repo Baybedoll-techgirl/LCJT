@@ -38,3 +38,10 @@ body {
 .btn {
     margin-bottom: 1rem;
 }
+
+/* GAME PAGE STYLING */
+
+#quiz {
+    display: flex;
+    justify-content: space-between;
+}
