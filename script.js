@@ -21,25 +21,27 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
   .then(response => response.json())
   .then(result => {
 
-    let availableQuesions = [...result];
-    
+    let availableQuestions = [...result];
+    console.log(availableQuestions);
   
     // let question = document.getElementById('question');
 
     
-    for (let i = 0; i < availableQuesions.length; i++) {
+    for (let i = 0; i < availableQuestions.length; i++) {
+      let questionDisplay = document.createElement('div');
      let question = document.createElement('h1');
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-     currentQuestion = availableQuesions[questionIndex];
+     let quizContainer = document.getElementById('quiz');
+    const questionIndex = i;
+     currentQuestion = availableQuestions[questionIndex];
      question.innerText = currentQuestion.question;
-     let questionDisplay = document.getElementById('quiz');
      questionDisplay.append(question);
-
+     quizContainer.append(questionDisplay);
 
       for (const [key, value] of Object.entries(currentQuestion.answers)) {
         //  console.log(`${key} ${value}`);
         if (value != null) {
-          let answerContainer = document.getElementById('answers');
+          let answerContainer = document.createElement('ul');
+          answerContainer.setAttribute("style", "list-style-type: none");
           let choiceLine = document.createElement("li");
           choiceLine.textContent = " " + value;
           choiceLine.setAttribute("for", key);
@@ -49,27 +51,27 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
           radioBtn.id = key;
           choiceLine.prepend(radioBtn);
           answerContainer.append(choiceLine);
-    
+          quizContainer.append(answerContainer);
         }
   
     }
 
    }
-  //  const radios = document.getElementsByName('Answer-choices');
+   const radios = document.getElementsByName('Answer-choices');
 
-  //  incrementScore = num => {
-  //   score += num;
-  //   scoreText.textContent = score;
-  // }
+   incrementScore = num => {
+    score += num;
+    scoreText.textContent = score;
+  }
 
-  // for(radio in radios) {
-  //   radios[radio].onclick = function() {
-  //     if (this.id === result[0].correct_answer) {
-  //      incrementScore(CORRECT_BONUS);
-  //     } 
-  //     localStorage.setItem('mostRecentScore', score);
-  //   };
-  // };
+  for(radio in radios) {
+    radios[radio].onclick = function() {
+      if (this.id === currentQuestion.correct_answer) {
+       incrementScore(CORRECT_BONUS);
+      } 
+      localStorage.setItem('mostRecentScore', score);
+    };
+  };
 
    })
   .catch(error => console.log('error', error));
