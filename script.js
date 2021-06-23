@@ -37,27 +37,28 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
      questionDisplay.append(question);
      quizContainer.append(questionDisplay);
 
+     let answerContainer = document.createElement('ul');
+          answerContainer.setAttribute("style", "list-style-type: none");
+
       for (const [key, value] of Object.entries(currentQuestion.answers)) {
         //  console.log(`${key} ${value}`);
         if (value != null) {
-          let answerContainer = document.createElement('ul');
-          answerContainer.setAttribute("style", "list-style-type: none");
           let choiceLine = document.createElement("li");
           choiceLine.textContent = " " + value;
           choiceLine.setAttribute("for", key);
           const radioBtn = document.createElement('input');
           radioBtn.setAttribute("type", "radio");
-          radioBtn.setAttribute("name", "Answer-choices");
+          radioBtn.setAttribute("class", "Answer-choices");
           radioBtn.id = key;
           choiceLine.prepend(radioBtn);
           answerContainer.append(choiceLine);
-          quizContainer.append(answerContainer);
+          questionDisplay.append(answerContainer);
         }
   
     }
 
    }
-   const radios = document.getElementsByName('Answer-choices');
+   const radios = document.getElementsByClassName('Answer-choices');
 
    incrementScore = num => {
     score += num;
