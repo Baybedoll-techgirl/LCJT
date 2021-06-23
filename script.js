@@ -23,22 +23,21 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
 
     let availableQuesions = [...result];
     
-    console.log(availableQuesions);
-    
   
     // let question = document.getElementById('question');
 
     
     for (let i = 0; i < availableQuesions.length; i++) {
-     let question = document.createElement('h1')
-     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+     let question = document.createElement('h1');
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
      currentQuestion = availableQuesions[questionIndex];
      question.innerText = currentQuestion.question;
-      let quizContainer = document.getElementById('quiz');
-      quizContainer.append(question);
+     let questionDisplay = document.getElementById('quiz');
+     questionDisplay.append(question);
+
 
       for (const [key, value] of Object.entries(currentQuestion.answers)) {
-        console.log(`${key} ${value}`);
+        //  console.log(`${key} ${value}`);
         if (value != null) {
           let answerContainer = document.getElementById('answers');
           let choiceLine = document.createElement("li");
