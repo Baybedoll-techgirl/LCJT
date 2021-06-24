@@ -53,6 +53,12 @@ body {
       background-image: linear-gradient( #376073, #256097) ;
   }
 
+  .team {
+      display: flex;
+      position:relative;
+      flex-direction: column;
+  }
+
   .container {
     padding: 0 16px;
   }
