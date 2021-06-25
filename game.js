@@ -22,21 +22,27 @@ fetch ("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZz
     let availableQuesions = [...result];
     console.log(availableQuesions);
     // const questionArray = Array.from[result];
-    const answer1 = document.getElementById("choice1");
-    const answer2 = document.getElementById("choice2");
-    const answer3 = document.getElementById("choice3");
-    const answer4 = document.getElementById("choice4");
-    const answer5 = document.getElementById("choice5");
-    const answer6 = document.getElementById("choice6");
-    question.innerHTML = result[4].question;   
-    answer1.innerText = result[4].answers.answer_a;
-    answer2.innerText = result[4].answers.answer_b;
-    answer3.innerText = result[4].answers.answer_c;
-    answer4.innerText = result[4].answers.answer_d;
-    answer5.innerText = result[4].answers.answer_e;
-    answer6.innerText = result[4].answers.answer_f;
+    for (let i = 0; i < availableQuestions.length; i++) {
+       let question = document.getElementById('question');
+      const questionIndex = i;
+       currentQuestion = availableQuestions[questionIndex];
+       question.innerText = currentQuestion.question;
+    }
+    // const answer1 = document.getElementById("choice1");
+    // const answer2 = document.getElementById("choice2");
+    // const answer3 = document.getElementById("choice3");
+    // const answer4 = document.getElementById("choice4");
+    // const answer5 = document.getElementById("choice5");
+    // const answer6 = document.getElementById("choice6");
+    // question.innerHTML = result[4].question;   
+    // answer1.innerText = result[4].answers.answer_a;
+    // answer2.innerText = result[4].answers.answer_b;
+    // answer3.innerText = result[4].answers.answer_c;
+    // answer4.innerText = result[4].answers.answer_d;
+    // answer5.innerText = result[4].answers.answer_e;
+    // answer6.innerText = result[4].answers.answer_f;
 
-   if (JSON.stringify(answer5) == " ") {
+   if (JSON.stringify(answer5) == null) {
        document.getElementById("fifthChoice").hidden;
    } 
     // console.log(result[4].question);
