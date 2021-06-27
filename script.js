@@ -55,11 +55,11 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
           localStorage.setItem("userScore", score);
           return score;
        });
-      }
-   })
+    }
+  })
   .catch(error => console.log('error', error));
 
-  let submit = document.getElementById('submitBtn');
+ 
   let finalScore = document.getElementById('finalScore');
   let userScore = localStorage.getItem('userScore');
   finalScore.innerText = `${userScore}/5`;
