@@ -1,8 +1,3 @@
-let questionCount = 0;
-let questions = [];
-let currentQuestion = {};
-let correctAnswers = new Array();
-let userAnswers = new Array();
 let score = 0;
 
 var myHeaders = new Headers();
@@ -57,6 +52,7 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
     for (let r=0; r<radios.length; r++) {
       radios[r].addEventListener("change", function() {
           if (this.value==="true") score += 1;
+          localStorage.setItem("userScore", score);
           return score;
        });
       }
@@ -64,8 +60,6 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
   .catch(error => console.log('error', error));
 
   let submit = document.getElementById('submitBtn');
-
-  submit.addEventListener('click', e => {
-    alert(`Your score is ${score}/5`);
-    window.location.assign('/end.html');
-  })
+  let finalScore = document.getElementById('finalScore');
+  let userScore = localStorage.getItem('userScore');
+  finalScore.innerText = `${userScore}/5`;
