@@ -4,6 +4,7 @@ video {
     height: 100vh;
     position: fixed; 
     background-color: #cccc;
+    opacity: .07;
   }
 
 
