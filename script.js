@@ -63,3 +63,5 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
   let finalScore = document.getElementById('finalScore');
   let userScore = localStorage.getItem('userScore');
   finalScore.innerText = `${userScore}/5`;
+
+
