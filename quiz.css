@@ -16,7 +16,8 @@ body {
  
 
 .container {
-    align-items: baseline;
+    align-items: center;
+    
 }
 
 .container > * {
@@ -36,23 +37,33 @@ body {
     width: 100px;
     height: 50px;
     position: relative;
-
+    margin-left: 50%;
+    margin-right: 50%;
 }
 
 /* GAME PAGE STYLING */
 
 #quiz {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 80vw; /* takes up the entire view width */
-    height: 100; /* takes up the entire view height */
-    justify-content: left;
-    align-items: left;
-   padding: 5%;
-    
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 80vw; /* takes up the entire view width */
+  height: 100; /* takes up the entire view height */
+  justify-content: center;
+  align-items: center;
+ padding: 5%;
+  
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
 
 
 .ul {
@@ -63,7 +74,7 @@ body {
 
   }
 
-  li {
+  .nav {
     display: inline;
     
   }
@@ -83,7 +94,7 @@ body {
   
 }
 
-li {
+.nav {
   float: left;
 }
 

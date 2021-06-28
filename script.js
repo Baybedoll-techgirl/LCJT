@@ -19,6 +19,7 @@ fetch("https://quizapi.io/api/v1/questions?limit=10&apiKey=q6NHZAHRcFHFl0runQZzu
   
     for (let i = 0; i < availableQuestions.length; i++) {
       let questionDisplay = document.createElement('div');
+      questionDisplay.setAttribute("style", "text-align: center");
       let question = document.createElement('h1');
       let quizContainer = document.getElementById('quiz');
       currentQuestion = availableQuestions[i];
